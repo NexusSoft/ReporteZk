@@ -30,9 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ReporteEmpleado));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnInsidencias = new DevExpress.XtraEditors.SimpleButton();
             this.btnHorarios = new DevExpress.XtraEditors.SimpleButton();
             this.btnConexion = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.btnBuscar = new DevExpress.XtraEditors.SimpleButton();
             this.btnImportar = new DevExpress.XtraEditors.SimpleButton();
             this.txtNombreEmpleado = new DevExpress.XtraEditors.TextEdit();
@@ -48,6 +50,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreEmpleado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkTodos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFin.Properties.CalendarTimeProperties)).BeginInit();
@@ -60,6 +63,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.btnInsidencias);
             this.panelControl1.Controls.Add(this.btnHorarios);
             this.panelControl1.Controls.Add(this.btnConexion);
             this.panelControl1.Controls.Add(this.groupControl1);
@@ -67,8 +71,18 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Padding = new System.Windows.Forms.Padding(5, 30, 5, 5);
-            this.panelControl1.Size = new System.Drawing.Size(780, 126);
+            this.panelControl1.Size = new System.Drawing.Size(760, 126);
             this.panelControl1.TabIndex = 0;
+            // 
+            // btnInsidencias
+            // 
+            this.btnInsidencias.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInsidencias.ImageOptions.Image")));
+            this.btnInsidencias.Location = new System.Drawing.Point(174, 3);
+            this.btnInsidencias.Name = "btnInsidencias";
+            this.btnInsidencias.Size = new System.Drawing.Size(75, 23);
+            this.btnInsidencias.TabIndex = 11;
+            this.btnInsidencias.Text = "Incidencia";
+            this.btnInsidencias.Click += new System.EventHandler(this.btnInsidencias_Click);
             // 
             // btnHorarios
             // 
@@ -92,6 +106,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.radioGroup1);
             this.groupControl1.Controls.Add(this.btnBuscar);
             this.groupControl1.Controls.Add(this.btnImportar);
             this.groupControl1.Controls.Add(this.txtNombreEmpleado);
@@ -104,9 +119,23 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(7, 32);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(766, 87);
+            this.groupControl1.Size = new System.Drawing.Size(746, 87);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Datos";
+            // 
+            // radioGroup1
+            // 
+            this.radioGroup1.Location = new System.Drawing.Point(410, 54);
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.radioGroup1.Properties.Appearance.Options.UseBackColor = true;
+            this.radioGroup1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.radioGroup1.Properties.Columns = 2;
+            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Concentrado"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Detallado")});
+            this.radioGroup1.Size = new System.Drawing.Size(197, 24);
+            this.radioGroup1.TabIndex = 9;
             // 
             // btnBuscar
             // 
@@ -198,7 +227,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 126);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(780, 483);
+            this.panelControl2.Size = new System.Drawing.Size(760, 483);
             this.panelControl2.TabIndex = 0;
             // 
             // CRViewer
@@ -213,7 +242,7 @@
             this.CRViewer.ShowGroupTreeButton = false;
             this.CRViewer.ShowLogo = false;
             this.CRViewer.ShowParameterPanelButton = false;
-            this.CRViewer.Size = new System.Drawing.Size(776, 479);
+            this.CRViewer.Size = new System.Drawing.Size(756, 479);
             this.CRViewer.TabIndex = 0;
             this.CRViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -221,7 +250,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 609);
+            this.ClientSize = new System.Drawing.Size(760, 609);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "Frm_ReporteEmpleado";
@@ -233,6 +262,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreEmpleado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkTodos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFin.Properties.CalendarTimeProperties)).EndInit();
@@ -262,5 +292,7 @@
         private DevExpress.XtraEditors.SimpleButton btnBuscar;
         private DevExpress.XtraEditors.SimpleButton btnConexion;
         private DevExpress.XtraEditors.SimpleButton btnHorarios;
+        private DevExpress.XtraEditors.RadioGroup radioGroup1;
+        private DevExpress.XtraEditors.SimpleButton btnInsidencias;
     }
 }

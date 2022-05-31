@@ -17,6 +17,7 @@ namespace ReporteZk
     {
         public Frm_ReporteEmpleado FrmReporteEmpleado;
         public Frm_Empleados_Horario FrmEmpladosHorario;
+        public Frm_Empleado_Insidencia FrmEmpladosInsidencia;
         public Frm_Empleados_Buscar()
         {
             InitializeComponent();
@@ -89,10 +90,16 @@ namespace ReporteZk
                 FrmReporteEmpleado.txtNombreEmpleado.Text = txtNombre.Text + " " + txtApellido.Text;
                 this.Close();
             }
-            else
+            else if (FrmEmpladosHorario != null)
             {
                 FrmEmpladosHorario.txtNombreEmpleado.Tag = txtNombre.Tag;
                 FrmEmpladosHorario.txtNombreEmpleado.Text = txtNombre.Text + " " + txtApellido.Text;
+                this.Close();
+            }
+            else if (FrmEmpladosInsidencia != null)
+            {
+                FrmEmpladosInsidencia.txtNombreEmpleado.Tag = txtNombre.Tag;
+                FrmEmpladosInsidencia.txtNombreEmpleado.Text = txtNombre.Text + " " + txtApellido.Text;
                 this.Close();
             }
         }

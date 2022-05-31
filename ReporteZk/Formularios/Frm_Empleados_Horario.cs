@@ -210,20 +210,24 @@ namespace ReporteZk
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (ismodoedicion)
+            DialogResult = XtraMessageBox.Show("¿Desea eliminar el registro?\nLos cambios no se podran revertir", "Eliminar Horario", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            if (DialogResult == DialogResult.Yes)
             {
-                CLS_Asistencia udpAsis = new CLS_Asistencia();
-                dtgHorarios.FocusedView.CloseEditor();
-                udpAsis.id = Convert.ToInt32(vid);
-                udpAsis.LOGID = Convert.ToInt32(vLOGID);
-                
-                udpAsis.MtdEliminar();
-                if (udpAsis.Exito)
+                if (ismodoedicion)
                 {
-                    XtraMessageBox.Show("Se ha Eliminado el registro con exito");
-                    btnBuscar.PerformClick();
+                    CLS_Asistencia udpAsis = new CLS_Asistencia();
+                    dtgHorarios.FocusedView.CloseEditor();
+                    udpAsis.id = Convert.ToInt32(vid);
+                    udpAsis.LOGID = Convert.ToInt32(vLOGID);
+
+                    udpAsis.MtdEliminar();
+                    if (udpAsis.Exito)
+                    {
+                        XtraMessageBox.Show("Se ha Eliminado el registro con exito");
+                        btnBuscar.PerformClick();
+                    }
+                    ismodoedicion = false;
                 }
-                ismodoedicion = false;
             }
         }
 

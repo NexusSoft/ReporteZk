@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CLS_Asistencia.cs" />
     <Compile Include="CLS_Empleados.cs" />
+    <Compile Include="CLS_Insidencias.cs" />
     <Compile Include="CLS_Tratamiento.cs" />
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="Conexion\ConexionBase.cs" />
