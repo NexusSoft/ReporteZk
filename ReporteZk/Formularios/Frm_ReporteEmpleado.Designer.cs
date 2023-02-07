@@ -177,7 +177,7 @@
             this.chkTodos.Location = new System.Drawing.Point(212, 55);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Properties.Caption = "Todos";
-            this.chkTodos.Size = new System.Drawing.Size(75, 19);
+            this.chkTodos.Size = new System.Drawing.Size(75, 20);
             this.chkTodos.TabIndex = 4;
             this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
             // 
@@ -238,13 +238,8 @@
             this.CRViewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CRViewer.Location = new System.Drawing.Point(2, 2);
             this.CRViewer.Name = "CRViewer";
-            this.CRViewer.ShowCloseButton = false;
-            this.CRViewer.ShowGroupTreeButton = false;
-            this.CRViewer.ShowLogo = false;
-            this.CRViewer.ShowParameterPanelButton = false;
             this.CRViewer.Size = new System.Drawing.Size(756, 479);
             this.CRViewer.TabIndex = 0;
-            this.CRViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // Frm_ReporteEmpleado
             // 
@@ -288,11 +283,12 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.DateEdit dtFin;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer CRViewer;
+        //private CrystalDecisions.Windows.Forms.CrystalReportViewer CRViewer;
         private DevExpress.XtraEditors.SimpleButton btnBuscar;
         private DevExpress.XtraEditors.SimpleButton btnConexion;
         private DevExpress.XtraEditors.SimpleButton btnHorarios;
         private DevExpress.XtraEditors.RadioGroup radioGroup1;
         private DevExpress.XtraEditors.SimpleButton btnInsidencias;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer CRViewer;
     }
 }
